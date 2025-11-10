@@ -96,6 +96,29 @@ img {
   background: rgba(148, 121, 244, 0.15);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.header-membership {
+  background: rgba(148, 121, 244, 0.16);
+  color: var(--deep-purple);
+  box-shadow: 0 10px 18px rgba(148, 121, 244, 0.18);
+}
+
+.header-membership:hover {
+  transform: translateY(-2px);
+  background: rgba(148, 121, 244, 0.28);
+}
+
+.header-membership.current {
+  background: var(--deep-purple);
+  color: #fff;
+}
+
 .discord-btn {
   background: var(--deep-purple);
   color: white;
@@ -215,6 +238,148 @@ img {
   font-family: "Baloo 2", cursive;
   font-size: 1.8rem;
   color: var(--deep-purple);
+}
+
+.membership-hero {
+  padding: 6rem 0 4.5rem;
+}
+
+.membership-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(2.5rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.membership-hero-copy h1 {
+  font-family: "Baloo 2", cursive;
+  font-size: clamp(2.3rem, 4.4vw, 3.2rem);
+  margin-bottom: 1rem;
+}
+
+.membership-hero-copy p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  max-width: 40ch;
+}
+
+.membership-hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.membership-hero-card {
+  background: var(--card-bg);
+  border-radius: 22px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 2px dashed rgba(148, 121, 244, 0.35);
+}
+
+.membership-hero-card .card-title {
+  font-family: "Baloo 2", cursive;
+  font-size: 1.3rem;
+  color: var(--deep-purple);
+  margin-bottom: 1rem;
+}
+
+.membership-hero-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+  color: var(--text-light);
+}
+
+.membership-perks {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.perks-intro h2 {
+  font-family: "Baloo 2", cursive;
+  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+}
+
+.perks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.perks-list h3 {
+  font-family: "Baloo 2", cursive;
+  margin-bottom: 0.4rem;
+  font-size: 1.25rem;
+  color: var(--deep-purple);
+}
+
+.perks-list p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.merch-highlight {
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.merch-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 1.6rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.merch-media {
+  background: rgba(212, 197, 255, 0.32);
+  border: 2px dashed rgba(148, 121, 244, 0.5);
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  min-height: 160px;
+  font-family: "Baloo 2", cursive;
+  color: var(--deep-purple);
+  text-align: center;
+  padding: 1rem;
+}
+
+.merch-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.webshop-cta {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: center;
+}
+
+.webshop-cta .cta-caption {
+  color: var(--text-light);
+  max-width: 36ch;
 }
 
 .hero-mascots {
@@ -731,6 +896,14 @@ details[open] summary {
     gap: 1rem;
   }
 
+  .header-actions {
+    margin-left: auto;
+  }
+
+  .membership-hero-actions {
+    width: 100%;
+  }
+
   .hero-stats {
     flex-wrap: wrap;
     gap: 1.2rem;
@@ -744,6 +917,22 @@ details[open] summary {
 
   .hero-actions {
     width: 100%;
+    flex-direction: column;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-actions .btn,
+  .header-actions .discord-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .membership-hero-actions {
     flex-direction: column;
   }
 
